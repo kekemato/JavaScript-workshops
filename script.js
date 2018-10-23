@@ -145,12 +145,17 @@
 // ______________
 
 let numbers3 = [];
+let numbersSize = 10
 
-for (let i = 0; i < 10; i++){
-    numbers3[i]= (Math.floor(Math.random() * 100) + 1);
+for (let i = 0; i < numbersSize; i++){
+    numbers3[i]= parseInt(Math.random() * 10 + 1);
 }
 
-let numbers4 = numbers3.slice(3, -3);
+console.log('tablica poczatkowa = ', numbers3);
 
-console.log(numbers3);
-console.log(numbers4);
+let startIndex = (numbersSize / 2) -2;
+console.log('startIndex = ', startIndex);
+var numberOfItems = 4;
+var newArray = numbers3.slice(startIndex, startIndex + numberOfItems);
+
+console.log('srodkowe 4 elementy = ', newArray);
