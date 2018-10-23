@@ -121,15 +121,36 @@
 
 // ______________
 
-let tablica = [1, 5, 7, 3, 8];
+// let tablica = [1, 5, 7, 3, 8];
 
-tablica.unshift(0);
-tablica.push(6);
+// tablica.unshift(0);
+// tablica.push(6);
 
-console.log(tablica);
+// console.log(tablica);
 
-tablica.shift(0);
-tablica.pop(6);
+// tablica.shift();
+// tablica.pop();
 
-console.log(tablica);
+// console.log(tablica);
 
+// ______________
+
+// let tablica2 = [1, 2, 3, 4, 5, 6];
+// let sliced = tablica2.slice(1, 3); //[2, 3]
+// let c = tablica2.slice(0, 2).concat(tablica2.slice(3, 6)); // [1, 2, 4, 5, 6]
+// let d = tablica2.slice(0, -2); // [1, 2, 3, 4]
+// let e = tablica2.slice(-2); // [5, 6]
+// let f = tablica2.slice(-3, -2); // [4]
+
+// ______________
+
+let numbers3 = [];
+
+for (let i = 0; i < 10; i++){
+    numbers3[i]= (Math.floor(Math.random() * 100) + 1);
+}
+
+let numbers4 = numbers3.slice(3, -3);
+
+console.log(numbers3);
+console.log(numbers4);
