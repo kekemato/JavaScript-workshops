@@ -263,19 +263,50 @@
 
 // ______________
 
-function addSquares(a, b){
-    function square(x){
-        return x * x;
+// function addSquares(a, b){
+//     function square(x){
+//         return x * x;
+//     }
+//     console.log(square(a) + square(b));
+//     return square(a) + square(a);
+// }
+
+// addSquares(2, 3);
+
+// const addSuares2 = (a,b) => {
+//     const square2 = (x) => x * x;
+//     return square2(a) + square2(b);
+// }
+
+// addSquares2(2, 3);
+
+// ______________
+
+function loop(x) {
+    console.log(x);
+    if (x >= 10)
+    return;
+    loop(x + 1);
     }
-    console.log(square(a) + square(b));
-    return square(a) + square(a);
+
+// ______________
+
+function fibo(n){
+        if ( n <= 0){
+        return 0;
+        }
+        else if ( n == 1){
+            return 1;
+        }
+    return fibo(n - 1) + fibo(n - 2);
 }
 
-addSquares(2, 3);
-
-const addSuares2 = (a,b) => {
-    const square2 = (x) => x * x;
-    return square2(a) + square2(b);
+function countdown(x){
+    console.log(x);
+    if (x >= 15){
+        return;
+    }
+    countdown(x + 1);
 }
 
-addSquares2(2, 3);
+countdown(4);
