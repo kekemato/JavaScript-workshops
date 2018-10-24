@@ -310,3 +310,52 @@ function countdown(x){
 }
 
 countdown(4);
+
+// ______________
+
+function foo(){
+    function bar() {
+        return 3;
+    }
+    return bar();
+    function bar() { //ta funkcja zostanie wyniesiona do góry, przed return bar() - 'hoisting'
+        return 8;
+    }
+}
+    console.log(foo()); // 8
+
+ //przypadek 2
+function foo(){
+    var bar = function() {
+        return 3;
+    };
+    return bar();
+    var bar = function() { //zmienne wewnątrz funkcji nie są wynoszone nad return
+        return 8;
+    };
+}
+    console.log(foo());
+
+//przypadek 3
+    console.log(foo()); //3
+    function foo(){
+    var bar = function() {
+        return 3;
+    };
+    return bar();
+    var bar = function() {
+        return 8;
+    };
+}
+
+//przypadek 4
+function foo(){
+    return bar(); //bar nie jest funkcją
+    var bar = function() {
+    return 3;
+    };
+    var bar = function() {
+    return 8;
+    };
+    }
+    console.log(foo());
