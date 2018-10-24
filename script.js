@@ -272,3 +272,10 @@ function addSquares(a, b){
 }
 
 addSquares(2, 3);
+
+const addSuares2 = (a,b) => {
+    const square2 = (x) => x * x;
+    return square2(a) + square2(b);
+}
+
+addSquares2(2, 3);
