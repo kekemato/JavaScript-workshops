@@ -144,18 +144,47 @@
 
 // ______________
 
-let numbers3 = [];
-let numbersSize = 10
+// let numbers3 = [];
+// let numbersSize = 10
 
-for (let i = 0; i < numbersSize; i++){
-    numbers3[i]= parseInt(Math.random() * 10 + 1);
+// for (let i = 0; i < numbersSize; i++){
+//     numbers3[i]= parseInt(Math.random() * 10 + 1);
+// }
+
+// console.log('tablica poczatkowa = ', numbers3);
+
+// let startIndex = (numbersSize / 2) -2;
+// console.log('startIndex = ', startIndex);
+// var numberOfItems = 4;
+// var newArray = numbers3.slice(startIndex, startIndex + numberOfItems);
+
+// console.log('srodkowe 4 elementy = ', newArray);
+
+// ______________
+
+// var array = [1, 2, 5, 6, 9, 5, 8];
+
+// console.log(array.indexOf(5)); // 2
+// console.log(array.indexOf(13)); // -1
+// console.log(array.indexOf(5, -3)); // 5
+// console.log(array.indexOf(5, -5)); // 2
+
+// var array2 = ['ala', 'ma', 'kota'];
+// console.log(array2.indexOf('kota')); // 2
+// console.log(array2.indexOf('psa')); // -1
+
+// ______________
+
+let numbers4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let x = 9;
+
+for (let i = 0; i < numbers4.length; i++){
+    if (numbers4[i] == x){
+        console.log(`znalazłem ${x}`);
+        console.log("Index 9 to: " + numbers4.indexOf(9));
+    }
 }
 
-console.log('tablica poczatkowa = ', numbers3);
-
-let startIndex = (numbersSize / 2) -2;
-console.log('startIndex = ', startIndex);
-var numberOfItems = 4;
-var newArray = numbers3.slice(startIndex, startIndex + numberOfItems);
-
-console.log('srodkowe 4 elementy = ', newArray);
+if (numbers4.indexOf(x) != -1){
+    console.log(`zawiera ${x}`);
+}
