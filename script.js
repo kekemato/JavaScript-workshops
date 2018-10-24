@@ -291,71 +291,91 @@ function loop(x) {
 
 // ______________
 
-function fibo(n){
-        if ( n <= 0){
-        return 0;
-        }
-        else if ( n == 1){
-            return 1;
-        }
-    return fibo(n - 1) + fibo(n - 2);
+// function fibo(n){
+//         if ( n <= 0){
+//         return 0;
+//         }
+//         else if ( n == 1){
+//             return 1;
+//         }
+//     return fibo(n - 1) + fibo(n - 2);
+// }
+
+// function countdown(x){
+//     console.log(x);
+//     if (x >= 15){
+//         return;
+//     }
+//     countdown(x + 1);
+// }
+
+// countdown(4);
+
+// // ______________
+
+// function foo(){
+//     function bar() {
+//         return 3;
+//     }
+//     return bar();
+//     function bar() { //ta funkcja zostanie wyniesiona do góry, przed return bar() - 'hoisting'
+//         return 8;
+//     }
+// }
+//     console.log(foo()); // 8
+
+//  //przypadek 2
+// function foo(){
+//     var bar = function() {
+//         return 3;
+//     };
+//     return bar();
+//     var bar = function() { //zmienne wewnątrz funkcji nie są wynoszone nad return
+//         return 8;
+//     };
+// }
+//     console.log(foo());
+
+// //przypadek 3
+//     console.log(foo()); //3
+//     function foo(){
+//     var bar = function() {
+//         return 3;
+//     };
+//     return bar();
+//     var bar = function() {
+//         return 8;
+//     };
+// }
+
+// //przypadek 4
+// function foo(){
+//     return bar(); //bar nie jest funkcją
+//     var bar = function() {
+//     return 3;
+//     };
+//     var bar = function() {
+//     return 8;
+//     };
+//     }
+//     console.log(foo());
+
+let index = sessionStorage.getItem('index') || 0;
+
+const addName = function(name){
+    localStorage.setItem(`person${[index]}` , `${name}`);
+    index++;
+    sessionStorage.setItem('index', index);
+};
+
+addName("Magda");
+addName("Marcin");
+addName("Kuba");
+addName("Jarek");
+addName("Patryk");
+
+const removeName = function(indexNumber){
+    localStorage.removeItem(`person${[indexNumber]}`);
 }
 
-function countdown(x){
-    console.log(x);
-    if (x >= 15){
-        return;
-    }
-    countdown(x + 1);
-}
-
-countdown(4);
-
-// ______________
-
-function foo(){
-    function bar() {
-        return 3;
-    }
-    return bar();
-    function bar() { //ta funkcja zostanie wyniesiona do góry, przed return bar() - 'hoisting'
-        return 8;
-    }
-}
-    console.log(foo()); // 8
-
- //przypadek 2
-function foo(){
-    var bar = function() {
-        return 3;
-    };
-    return bar();
-    var bar = function() { //zmienne wewnątrz funkcji nie są wynoszone nad return
-        return 8;
-    };
-}
-    console.log(foo());
-
-//przypadek 3
-    console.log(foo()); //3
-    function foo(){
-    var bar = function() {
-        return 3;
-    };
-    return bar();
-    var bar = function() {
-        return 8;
-    };
-}
-
-//przypadek 4
-function foo(){
-    return bar(); //bar nie jest funkcją
-    var bar = function() {
-    return 3;
-    };
-    var bar = function() {
-    return 8;
-    };
-    }
-    console.log(foo());
+removeName(1);
