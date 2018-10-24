@@ -191,22 +191,34 @@
 
 // ______________
 
-let cat = {};
-    cat.race = "persian";
-    cat.name = "Puszek";
-    cat.fur = "white";
-    cat.age = 12;
+// let cat = {};
+//     cat.race = "persian";
+//     cat.name = "Puszek";
+//     cat.fur = "white";
+//     cat.age = 12;
 
 
-console.log(cat);
+// console.log(cat);
 
-let cat2 = {
-    race: "european",
-    name: "Leon",
-    fur: "ginger",
-    age: "8 weeks"
-};
+// let cat2 = {
+//     race: "european",
+//     name: "Leon",
+//     fur: "ginger",
+//     age: "8 weeks"
+// };
 
-console.log(cat2);
+// console.log(cat2);
 
 // ______________
+
+let sum = function(a, b){
+    return a + b;
+}
+
+let sumN = function(){
+    let sum = 0;
+    for(let i = 0; i < arguments.length; i++){
+        sum+= arguments[i];
+    }
+    return sum;
+}
