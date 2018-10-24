@@ -240,15 +240,21 @@
 
 // ______________
 
-let c = 0;
+// let c = 0;
 
-let newFunction = function(a, b){
-    let d = a + b;
-    console.log(d);
-    c = 3;
-    return a - b;
-}
+// let newFunction = function(a, b){
+//     let d = a + b;
+//     console.log(d);
+//     c = 3;
+//     return a - b;
+// }
 
-console.log(c);
-console.log(newFunction(3, 5));
-console.log(d);
+// console.log(c);
+// console.log(newFunction(3, 5));
+// console.log(d);
+
+(function(a, b){
+    let sum = a + b;
+    console.log(sum);
+    return sum;
+})(5, 7);
