@@ -253,8 +253,22 @@
 // console.log(newFunction(3, 5));
 // console.log(d);
 
-(function(a, b){
-    let sum = a + b;
-    console.log(sum);
-    return sum;
-})(5, 7);
+// ______________
+
+// (function(a, b){
+//     let sum = a + b;
+//     console.log(sum);
+//     return sum;
+// })(5, 7);
+
+// ______________
+
+function addSquares(a, b){
+    function square(x){
+        return x * x;
+    }
+    console.log(square(a) + square(b));
+    return square(a) + square(a);
+}
+
+addSquares(2, 3);
