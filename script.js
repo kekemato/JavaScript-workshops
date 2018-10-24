@@ -211,14 +211,29 @@
 
 // ______________
 
-let sum = function(a, b){
-    return a + b;
-}
+// function sum (a, b){
+//     return a + b;
+// }
 
-let sumN = function(){
-    let sum = 0;
-    for(let i = 0; i < arguments.length; i++){
-        sum+= arguments[i];
-    }
-    return sum;
-}
+// let sumN = function(){
+//     let sum = 0;
+//     for(let i = 0; i < arguments.length; i++){
+//         sum+= arguments[i];
+//     }
+//     return sum;
+// }
+
+// let superSum = sum;
+// console.log(superSum(4, 7));
+// let superSum2 = sum(2, 5);
+// console.log(superSum2);
+
+// ______________
+
+const multiplyDivide = (a, b, c) => (a * b) / c;
+
+const multiplyDivide2 = (a, b, c) => {
+    return (a * b) / c;
+};
+
+console.log(multiplyDivide(2, 6, 4));
