@@ -360,12 +360,34 @@ function loop(x) {
 //     }
 //     console.log(foo());
 
-let index = sessionStorage.getItem('index') || 0;
+// ______________
+
+// let index = sessionStorage.getItem('index') || 0;
+
+// const addName = function(name){
+//     localStorage.setItem(`person${[index]}` , `${name}`);
+//     index++;
+//     sessionStorage.setItem('index', index);
+// };
+
+// addName("Magda");
+// addName("Marcin");
+// addName("Kuba");
+// addName("Jarek");
+// addName("Patryk");
+
+// const removeName = function(indexNumber){
+//     localStorage.removeItem(`person${[indexNumber]}`);
+// }
+
+// removeName(1);
+
+let index = localStorage.getItem('index') || 0;
 
 const addName = function(name){
-    localStorage.setItem(`person${[index]}` , `${name}`);
+    sessionStorage.setItem(`person${[index]}` , `${name}`);
     index++;
-    sessionStorage.setItem('index', index);
+    localStorage.setItem('index', index);
 };
 
 addName("Magda");
@@ -374,8 +396,7 @@ addName("Kuba");
 addName("Jarek");
 addName("Patryk");
 
-const removeName = function(indexNumber){
-    localStorage.removeItem(`person${[indexNumber]}`);
-}
-
-removeName(1);
+// const removeName = function(indexNumber){
+    //     sessionStorage.removeItem(`person${[indexNumber]}`);
+    // }
+    
