@@ -175,16 +175,38 @@
 
 // ______________
 
-let numbers4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let x = 9;
+// let numbers4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let x = 9;
 
-for (let i = 0; i < numbers4.length; i++){
-    if (numbers4[i] == x){
-        console.log(`znalazłem ${x}`);
-        console.log("Index 9 to: " + numbers4.indexOf(9));
-    }
-}
+// for (let i = 0; i < numbers4.length; i++){
+//     if (numbers4[i] == x){
+//         console.log(`znalazłem ${x}`);
+//         console.log("Index 9 to: " + numbers4.indexOf(9));
+//     }
+// }
 
-if (numbers4.indexOf(x) != -1){
-    console.log(`zawiera ${x}`);
-}
+// if (numbers4.indexOf(x) != -1){
+//     console.log(`zawiera ${x}`);
+// }
+
+// ______________
+
+let cat = {};
+    cat.race = "persian";
+    cat.name = "Puszek";
+    cat.fur = "white";
+    cat.age = 12;
+
+
+console.log(cat);
+
+let cat2 = {
+    race: "european",
+    name: "Leon",
+    fur: "ginger",
+    age: "8 weeks"
+};
+
+console.log(cat2);
+
+// ______________
