@@ -230,10 +230,25 @@
 
 // ______________
 
-const multiplyDivide = (a, b, c) => (a * b) / c;
+// const multiplyDivide = (a, b, c) => (a * b) / c;
 
-const multiplyDivide2 = (a, b, c) => {
-    return (a * b) / c;
-};
+// const multiplyDivide2 = (a, b, c) => {
+//     return (a * b) / c;
+// };
 
-console.log(multiplyDivide(2, 6, 4));
+// console.log(multiplyDivide(2, 6, 4));
+
+// ______________
+
+let c = 0;
+
+let newFunction = function(a, b){
+    let d = a + b;
+    console.log(d);
+    c = 3;
+    return a - b;
+}
+
+console.log(c);
+console.log(newFunction(3, 5));
+console.log(d);
